@@ -17,8 +17,8 @@ run() ->
         test_encode_decode_url(),
         test_chain_apps()
     catch
-        _:Err ->
-            io:format("ERROR~n~p~n~p~n", [Err, erlang:get_stacktrace()])
+        Class:Reason:Stacktrace ->
+            io:format("ERROR~n~p~n~p~n~p~n", [Class, Reason, Stacktrace])
     end.
 
 %% ===================================================================

@@ -151,7 +151,7 @@ add_binding(Opts, Addr) ->
 
 
 handle_ssl_transport({ok, NewSocket}, Timeout) ->
-    handle_ssl_handshake(ssl:ssl_accept(NewSocket, Timeout), NewSocket);
+    handle_ssl_handshake(ssl:ssl_handshake(NewSocket, Timeout), NewSocket);
 handle_ssl_transport(Error, _Timeout) ->
     Error.
 

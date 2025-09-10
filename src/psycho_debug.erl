@@ -47,7 +47,7 @@ trace_messages(Process, Options) ->
     dbg_messages(Process, Opts).
 
 stop_tracing() ->
-    dbg:stop_clear().
+    dbg:stop().
 
 %%%===================================================================
 %%% dbg wrappers
